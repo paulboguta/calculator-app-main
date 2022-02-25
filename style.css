@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+/* 
+***** COLORS *****
+-> Theme 1
+#### Backgrounds
+- Very dark desaturated blue (main background): hsl(222, 26%, 31%)
+- Very dark desaturated blue (toggle background, keypad background): hsl(223, 31%, 20%)
+- Very dark desaturated blue (screen background): hsl(224, 36%, 15%)
+#### Keys
+- Desaturated dark blue (key background): hsl(225, 21%, 49%)
+- Desaturated dark blue (key shadow): hsl(224, 28%, 35%)
+
+- Red (key background, toggle): hsl(6, 63%, 50%)
+- Dark red (key shadow): hsl(6, 70%, 34%)
+
+- Light grayish orange (key background): hsl(30, 25%, 89%)
+- Grayish orange (key shadow): hsl(28, 16%, 65%)
+
+#### Text
+
+- Very dark grayish blue: hsl(221, 14%, 31%)
+- White: hsl(0, 0, 100%)
+
+
+
+### Theme 2
+
+#### Backgrounds
+
+- Light gray (main background): hsl(0, 0%, 90%)
+- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
+- Very light gray (screen background): hsl(0, 0%, 93%)
+
+#### Keys
+
+- Dark moderate cyan (key background): hsl(185, 42%, 37%)
+- Very dark cyan (key shadow): hsl(185, 58%, 25%)
+
+- Orange (key background, toggle): hsl(25, 98%, 40%)
+- Dark orange (key shadow): hsl(25, 99%, 27%)
+
+- Light grayish yellow (key background): hsl(45, 7%, 89%)
+- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
+
+#### Text
+
+- Very dark grayish yellow: hsl(60, 10%, 19%)
+- White (text): hsl(0, 0, 100%)
+
+### Theme 3
+
+#### Backgrounds
+
+- Very dark violet (main background): hsl(268, 75%, 9%)
+- Very dark violet (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
+
+#### Keys
+
+- Dark violet (key background): hsl(281, 89%, 26%)
+- Vivid magenta (key shadow): hsl(285, 91%, 52%)
+
+- Pure cyan (key background, toggle): hsl(176, 100%, 44%)
+- Soft cyan (key shadow): hsl(177, 92%, 70%)
+
+- Very dark violet (key background): hsl(268, 47%, 21%)
+- Dark magenta (key shadow): hsl(290, 70%, 36%)
+
+#### Text
+
+- Light yellow: hsl(52, 100%, 62%)
+- Very dark blue: hsl(198, 20%, 13%)
+- White (text): hsl(0, 0, 100%)
+
+## Typography
+- Font size (numbers): 32px
+
+### Font
+- Family: Spartan
+ */
+
+:root {
+  /* TEXT COLORS */
+
+  --text-clr-darkblue: hsl(221, 14%, 31%);
+  --text-clr-white: #fff;
+  /* THEME 1 COLORS */
+  --t1-clr-bg-main: hsl(222, 26%, 31%);
+  --t1-clr-bg-toggle: hsl(223, 31%, 20%);
+  --t1-clr-bg-screen: hsl(224, 36%, 15%);
+  --t1-clr-kb-1: hsl(225, 21%, 49%);
+  --t1-clr-ks-1: hsl(224, 28%, 35%);
+  --t1-clr-kb-2: hsl(6, 63%, 50%);
+  --t1-clr-ks-2: hsl(6, 70%, 34%);
+  --t1-clr-kb-3: hsl(30, 25%, 89%);
+  --t1-clr-ks-3: hsl(28, 16%, 65%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--t1-clr-bg-main);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  overflow: hidden;
+
+  font-size: 3.2rem;
+  font-family: "Spartan", sans-serif;
+  color: var(--text-clr-white);
+}
+
+.container {
+  height: 90vh;
+  width: 90vw;
+  padding: 2rem;
+}
+/* STYLING A TOP BAR OF A CALCULATOR */
+.container__top-bar {
+  height: 6rem;
+  margin-bottom: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+.container__top-bar--logo {
+  font-size: 4rem;
+}
+
+.container__top-bar--theme-selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15rem;
+}
+
+.theme-selection__title,
+.theme-selection__number {
+  font-size: 1.4rem;
+}
+
+.theme-selection__title {
+  margin-top: 1.7rem;
+}
+
+.theme-selection__container {
+  height: 100%;
+  width: 7rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-selection__container-numbers {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
+}
+
+.theme-selection__number {
+  background-color: transparent;
+  border: transparent;
+  color: var(--text-clr-white);
+
+  font-family: "Spartan", sans-serif;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.theme-selection__toggle-container {
+  background-color: var(--t1-clr-bg-toggle);
+  height: 2.8rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border-radius: 2rem;
+}
+
+.toggle-theme {
+  background-color: var(--t1-clr-kb-2);
+
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+
+  border: transparent;
+  box-shadow: var(--t1-clr-ks-2) 0px 0px 2px;
+}
+
+.container__display {
+  background-color: var(--t1-clr-bg-screen);
+  height: 12rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  position: relative;
+}
+
+.container__display-calc {
+  margin-right: 3rem;
+  margin-top: 1.5rem;
+  font-size: 4.2rem;
+}
+
+.container__display-operations {
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.container__calc {
+  background-color: var(--t1-clr-bg-toggle);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  justify-content: center;
+  gap: 1rem;
+  padding: 2.5rem;
+
+  border-radius: 1rem;
+}
+
+/* STYLING KEYS */
+.key {
+  border: none;
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Spartan", sans-serif;
+  font-size: 3.6rem;
+}
+
+.key-white {
+  height: 8rem;
+  width: 8rem;
+  background-color: var(--text-clr-white);
+  color: var(--text-clr-darkblue);
+
+  box-shadow: 0px 3px 2px 0px var(--t1-clr-ks-3);
+}
+
+.key-blue {
+  background-color: var(--t1-clr-kb-1);
+  color: var(--text-clr-white);
+  font-size: 2.4rem;
+  box-shadow: 0px 3px 2px 0px var(--t1-clr-ks-1);
+}
+
+.key-reset {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.key-equal {
+  background-color: var(--t1-clr-kb-2);
+  grid-column-start: 3;
+  grid-column-end: 5;
+  color: var(--text-clr-white);
+  box-shadow: 0px 3px 2px 0px var(--t1-clr-ks-2);
+}
+/* KEYS HOVER STATE */
+
+.key:hover {
+  cursor: pointer;
+  transform: scale(105%);
+  transition: 0.1s ease-in;
+}
+
+.active {
+  transform: scale(90%);
+}
+
+.opacity {
+  opacity: 0;
+}
