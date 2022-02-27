@@ -78,21 +78,47 @@
 - Family: Spartan
  */
 
-:root {
-  /* TEXT COLORS */
+[data-theme="1"] {
+  /* TEME 1 TEXT */
 
-  --text-clr-darkblue: hsl(221, 14%, 31%);
+  --text-clr: hsl(221, 14%, 31%);
   --text-clr-white: #fff;
   /* THEME 1 COLORS */
-  --t1-clr-bg-main: hsl(222, 26%, 31%);
-  --t1-clr-bg-toggle: hsl(223, 31%, 20%);
-  --t1-clr-bg-screen: hsl(224, 36%, 15%);
-  --t1-clr-kb-1: hsl(225, 21%, 49%);
-  --t1-clr-ks-1: hsl(224, 28%, 35%);
-  --t1-clr-kb-2: hsl(6, 63%, 50%);
-  --t1-clr-ks-2: hsl(6, 70%, 34%);
-  --t1-clr-kb-3: hsl(30, 25%, 89%);
-  --t1-clr-ks-3: hsl(28, 16%, 65%);
+  --clr-bg-main: hsl(222, 26%, 31%);
+  --clr-bg-toggle: hsl(223, 31%, 20%);
+  --clr-bg-screen: hsl(224, 36%, 15%);
+  --clr-kb-1: hsl(225, 21%, 49%);
+  --clr-ks-1: hsl(224, 28%, 35%);
+  --clr-kb-2: hsl(6, 63%, 50%);
+  --clr-ks-2: hsl(6, 70%, 34%);
+  --clr-kb-3: hsl(30, 25%, 89%);
+  --clr-ks-3: hsl(28, 16%, 65%);
+}
+
+[data-theme="2"] {
+  --text-clr: hsl(60, 10%, 19%);
+  --clr-bg-main: hsl(0, 0%, 90%);
+  --clr-bg-toggle: hsl(0, 5%, 81%);
+  --clr-bg-screen: hsl(0, 0%, 93%);
+  --clr-kb-1: hsl(185, 42%, 37%);
+  --clr-ks-1: hsl(185, 58%, 25%);
+  --clr-kb-2: hsl(25, 98%, 40%);
+  --clr-ks-2: hsl(25, 99%, 27%);
+  --clr-kb-3: hsl(45, 7%, 89%);
+  --clr-ks-3: hsl(35, 11%, 61%);
+}
+
+[data-theme="3"] {
+  --text-clr: hsl(52, 100%, 62%);
+  --clr-bg-main: hsl(268, 75%, 9%);
+  --clr-bg-toggle: hsl(268, 71%, 12%);
+  --clr-bg-screen: hsl(268, 71%, 12%);
+  --clr-kb-1: hsl(281, 89%, 26%);
+  --clr-ks-1: hsl(285, 91%, 52%);
+  --clr-kb-2: hsl(176, 100%, 44%);
+  --clr-ks-2: hsl(177, 92%, 70%);
+  --clr-kb-3: hsl(268, 47%, 21%);
+  --clr-ks-3: hsl(290, 70%, 36%);
 }
 
 * {
@@ -106,7 +132,7 @@ html {
 }
 
 body {
-  background-color: var(--t1-clr-bg-main);
+  background-color: var(--clr-bg-main);
 
   display: flex;
   flex-direction: column;
@@ -123,7 +149,7 @@ body {
 
 .container {
   height: 90vh;
-  width: 90vw;
+  width: 50rem;
   padding: 2rem;
 }
 /* STYLING A TOP BAR OF A CALCULATOR */
@@ -171,15 +197,15 @@ body {
 .theme-selection__number {
   background-color: transparent;
   border: transparent;
-  color: var(--text-clr-white);
 
+  color: white;
   font-family: "Spartan", sans-serif;
   font-size: 1.4rem;
   cursor: pointer;
 }
 
 .theme-selection__toggle-container {
-  background-color: var(--t1-clr-bg-toggle);
+  background-color: var(--clr-bg-toggle);
   height: 2.8rem;
 
   display: flex;
@@ -190,18 +216,18 @@ body {
 }
 
 .toggle-theme {
-  background-color: var(--t1-clr-kb-2);
+  background-color: var(--clr-kb-2);
 
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 100%;
 
   border: transparent;
-  box-shadow: var(--t1-clr-ks-2) 0px 0px 2px;
+  box-shadow: var(--clr-ks-2) 0px 0px 2px;
 }
 
 .container__display {
-  background-color: var(--t1-clr-bg-screen);
+  background-color: var(--clr-bg-screen);
   height: 12rem;
   margin-bottom: 3rem;
   border-radius: 1rem;
@@ -227,7 +253,7 @@ body {
 }
 
 .container__calc {
-  background-color: var(--t1-clr-bg-toggle);
+  background-color: var(--clr-bg-toggle);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -251,20 +277,22 @@ body {
   font-size: 3.6rem;
 }
 
-.key-white {
+.key-sq {
   height: 8rem;
   width: 8rem;
-  background-color: var(--text-clr-white);
-  color: var(--text-clr-darkblue);
+}
 
-  box-shadow: 0px 3px 2px 0px var(--t1-clr-ks-3);
+.key-white {
+  background-color: var(--clr-kb-3);
+  color: var(--text-clr);
+  box-shadow: 0px 3px 2px 0px var(--clr-ks-3);
 }
 
 .key-blue {
-  background-color: var(--t1-clr-kb-1);
-  color: var(--text-clr-white);
+  background-color: var(--clr-kb-1);
+  color: white;
   font-size: 2.4rem;
-  box-shadow: 0px 3px 2px 0px var(--t1-clr-ks-1);
+  box-shadow: 0px 3px 2px 0px var(--clr-ks-1);
 }
 
 .key-reset {
@@ -273,11 +301,16 @@ body {
 }
 
 .key-equal {
-  background-color: var(--t1-clr-kb-2);
+  background-color: var(--clr-kb-2);
   grid-column-start: 3;
   grid-column-end: 5;
   color: var(--text-clr-white);
-  box-shadow: 0px 3px 2px 0px var(--t1-clr-ks-2);
+  box-shadow: 0px 3px 2px 0px var(--clr-ks-2);
+}
+
+.key-del {
+  grid-column-start: 4;
+  grid-column-end: 4;
 }
 /* KEYS HOVER STATE */
 
@@ -293,4 +326,17 @@ body {
 
 .opacity {
   opacity: 0;
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+
+  font-size: 1rem;
+  font-style: italic;
+  font-family: sans-serif;
 }
