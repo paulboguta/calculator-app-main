@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://calculator-app-pawelboguta.netlify.app/)
+- Live Site URL: [link](https://calculator-app-pawelboguta.netlify.app/)
 
 ## My process
 
