@@ -90,7 +90,11 @@ const addNumber = (number) => {
       return;
     }
   }
-  a = a.toString() + number.toString();
+  if (a.toString().length > 14) {
+    return;
+  } else {
+    a = a.toString() + number.toString();
+  }
 };
 
 keyNumber.forEach((number) => {

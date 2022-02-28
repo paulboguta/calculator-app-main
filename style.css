@@ -244,6 +244,8 @@ body {
   margin-right: 3rem;
   margin-top: 1.5rem;
   font-size: 4.2rem;
+
+  word-break: break-all;
 }
 
 .container__display-operations {
