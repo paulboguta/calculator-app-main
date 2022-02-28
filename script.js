@@ -107,8 +107,7 @@ keyEqual.addEventListener("click", () => {
   displayCalculation();
 });
 
-///// HANDLING RESET AND DELETE BUTTON
-
+///// HANDLING RESET AND DELETE BUTTON ////
 // FUNCTION CLEARING CALCULATOR
 keyReset.addEventListener("click", () => {
   clear();
@@ -132,7 +131,7 @@ const deleteDigit = () => {
   a = a.toString().slice(0, -1);
 };
 
-// HANDLING THEMES
+//// HANDLING THEMES ////
 
 const themeTitle = document.querySelector(".theme-selection__title");
 const themeNumber = document.querySelectorAll(".theme-selection__number");

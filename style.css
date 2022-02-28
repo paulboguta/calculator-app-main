@@ -79,8 +79,7 @@
  */
 
 [data-theme="1"] {
-  /* TEME 1 TEXT */
-
+  /* TEHME 1 TEXT */
   --text-clr: hsl(221, 14%, 31%);
   --text-clr-white: #fff;
   /* THEME 1 COLORS */
@@ -96,7 +95,9 @@
 }
 
 [data-theme="2"] {
+  /* THEME 2 TEXT */
   --text-clr: hsl(60, 10%, 19%);
+  /* THEME 2 COLORS */
   --clr-bg-main: hsl(0, 0%, 90%);
   --clr-bg-toggle: hsl(0, 5%, 81%);
   --clr-bg-screen: hsl(0, 0%, 93%);
@@ -109,7 +110,9 @@
 }
 
 [data-theme="3"] {
+  /* THEME 3 TEXT */
   --text-clr: hsl(52, 100%, 62%);
+  /* THEME 3 COLORS */
   --clr-bg-main: hsl(268, 75%, 9%);
   --clr-bg-toggle: hsl(268, 71%, 12%);
   --clr-bg-screen: hsl(268, 71%, 12%);
