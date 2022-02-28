@@ -41,7 +41,6 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 - JS ES6+
 
 ### What I learned
@@ -74,6 +73,12 @@ switch (operator) {
     break;
   // etc
 }
+```
+
+Lastly, I had a problem with decimals, I came up with dealing with showing last 2 decimals rounded, but the problem was toFixed(2) was showing also 2.00 etc. I read about that and found that it returns a string and I just did parseFloat on it again.
+
+```js
+a = parseFloat(calc.toFixed(2));
 ```
 
 ### Continued development

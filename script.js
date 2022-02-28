@@ -44,7 +44,7 @@ const calculate = () => {
       return;
   }
 
-  a = calc.toFixed(2); // round to 2 decimal
+  a = parseFloat(calc.toFixed(2)); // round to 1 decimal
   operator = undefined;
   b = "";
 };
