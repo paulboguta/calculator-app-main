@@ -329,19 +329,6 @@ body {
   opacity: 0;
 }
 
-/* ATTRIBUTION */
-
-.attribution {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  text-align: center;
-
-  font-size: 1rem;
-  font-style: italic;
-  font-family: sans-serif;
-}
-
 /* MOBILE RESPONSIVENESS */
 
 @media (max-height: 900px) {
@@ -378,7 +365,7 @@ body {
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .container {
     width: 95vw;
     transition: 0.3s ease-in;
@@ -389,21 +376,19 @@ body {
     height: 6rem;
     transition: 0.3s ease-in;
   }
-
 }
 
-@media(max-width: 400px) {
-  
+@media (max-width: 400px) {
   .key {
     font-size: 2rem;
   }
-  
+
   .key-sq {
     width: 6rem;
     height: 6rem;
     transition: 0.3s ease-in;
   }
-  
+
   .container__display-calc {
     font-size: 4rem;
   }
