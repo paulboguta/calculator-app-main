@@ -44,7 +44,7 @@ const calculate = () => {
       return;
   }
 
-  a = calc;
+  a = calc.toFixed(2); // round to 2 decimal
   operator = undefined;
   b = "";
 };
@@ -150,11 +150,12 @@ themeNumber.forEach((btn) => {
   });
 });
 
-function setColor(c) {
-  logo.style.color = `${c}`;
-  themeTitle.style.color = `${c}`;
+function setColor(color) {
+  logo.style.color = `${color}`;
+  themeTitle.style.color = `${color}`;
+  displayCalc.style.color = `${color}`;
   themeNumber.forEach((number) => {
-    number.style.color = `${c}`;
+    number.style.color = `${color}`;
   });
 }
 
