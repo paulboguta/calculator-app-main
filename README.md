@@ -14,7 +14,6 @@ They gave me design for the project and style guide (colors, typography).
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -83,7 +82,7 @@ a = parseFloat(calc.toFixed(2));
 
 ### Continued development
 
-I'm not happy with everything. I want to practice and improve in structuring js file. I feel like it's not structured perfectly and in the best order. This was my first that big (as for me) project and it was not easy to structure my js file well. I guess it might be time to start learning design patterns. Secondly, I tried to use BEM methodology at least in the beginning of the project just for the sake of practice, I'm going to try and implement it more and better than now.
+I'm not happy with everything. I want to practice and improve in structuring js file. I feel like it's not structured perfectly and in the best order. This was my first that big (as for me) project and it was not easy to structure my js file well. I guess it might be time to start learning design patterns. Secondly, I tried to use BEM methodology at least in the beginning of the project just for the sake of practice, I'm going to try and implement it more and better than now. Last but not least, I have still a lot to learn in responsive design.
 
 ### Useful resources
 
