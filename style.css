@@ -142,18 +142,16 @@ body {
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
   overflow: hidden;
-
+  height: 100vh;
   font-size: 3.2rem;
   font-family: "Spartan", sans-serif;
   color: var(--text-clr-white);
 }
 
 .container {
-  height: 90vh;
   width: 50rem;
-  padding: 2rem;
+  padding: 4rem;
 }
 /* STYLING A TOP BAR OF A CALCULATOR */
 .container__top-bar {
@@ -342,4 +340,71 @@ body {
   font-size: 1rem;
   font-style: italic;
   font-family: sans-serif;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-height: 900px) {
+  .container {
+    transform: scale(95%);
+    transition: 0.3s ease-in;
+  }
+}
+
+@media (max-height: 800px) {
+  .container {
+    transform: scale(90%);
+    transition: 0.3s ease-in;
+  }
+}
+
+@media (max-height: 700px) {
+  .container {
+    transform: scale(85%);
+    transition: 0.3s ease-in;
+  }
+}
+@media (max-height: 600px) {
+  .container {
+    transform: scale(80%);
+    transition: 0.3s ease-in;
+  }
+}
+
+@media (max-height: 500px) {
+  .container {
+    transform: scale(75%);
+    transition: 0.3s ease-in;
+  }
+}
+
+@media(max-width: 500px) {
+  .container {
+    width: 95vw;
+    transition: 0.3s ease-in;
+  }
+
+  .key-sq {
+    width: 6rem;
+    height: 6rem;
+    transition: 0.3s ease-in;
+  }
+
+}
+
+@media(max-width: 400px) {
+  
+  .key {
+    font-size: 2rem;
+  }
+  
+  .key-sq {
+    width: 6rem;
+    height: 6rem;
+    transition: 0.3s ease-in;
+  }
+  
+  .container__display-calc {
+    font-size: 4rem;
+  }
 }
